@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Sección 0081</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      // This example creates a simple polygon representing the Bermuda Triangle.
+
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14.5,
+                center: { lat:19.227934, lng:- 103.767893 },
+                mapTypeId: 'roadmap'
+            });
+
+            // Define the LatLng coordinates for the polygon's path.
+            var triangleCoords = [
+
+                { lng: - 103.7549686, lat: 19.223152 },
+                { lng: - 103.7560844, lat: 19.2239017 },
+                { lng: - 103.7571144, lat: 19.2252794 },
+                { lng: - 103.7577152, lat: 19.2267585 },
+                { lng: - 103.7576294, lat: 19.2280957 },
+                { lng: - 103.7565672, lat: 19.2407277 },
+                { lng: - 103.7562132, lat: 19.2418724 },
+                { lng: - 103.7589061, lat: 19.2422472 },
+                { lng: - 103.7608051, lat: 19.241842 },
+                { lng: - 103.7628007, lat: 19.2406973 },
+                { lng: - 103.7647641, lat: 19.240049 },
+                { lng: - 103.7670493, lat: 19.2388639 },
+                { lng: - 103.7673604, lat: 19.238874 },
+                { lng: - 103.7755251, lat: 19.2452758 },
+                { lng: - 103.7790871, lat: 19.246228 },
+                { lng: - 103.7752247, lat: 19.236767 },
+                { lng: - 103.7789583, lat: 19.2354704 },
+                { lng: - 103.7789583, lat: 19.2334444 },
+                { lng: - 103.7820482, lat: 19.2333836 },
+                { lng: - 103.7820697, lat: 19.2328771 },
+                { lng: - 103.7798166, lat: 19.2318844 },
+                { lng: - 103.7787008, lat: 19.2308106 },
+                { lng: - 103.7795591, lat: 19.2261507 },
+                { lng: - 103.7780571, lat: 19.2191808 },
+                { lng: - 103.7835288, lat: 19.2069219 },
+                { lng: - 103.7825847, lat: 19.2061317 },
+                { lng: - 103.781383, lat: 19.2061317 },
+                { lng: - 103.7810183, lat: 19.2067396 },
+                { lng: - 103.7798595, lat: 19.2065977 },
+                { lng: - 103.7793231, lat: 19.2053414 },
+                { lng: - 103.7800527, lat: 19.2037811 },
+                { lng: - 103.7774777, lat: 19.2028085 },
+                { lng: - 103.7754178, lat: 19.2023221 },
+                { lng: - 103.774817, lat: 19.2004578 },
+                { lng: - 103.773272, lat: 19.199627 },
+                { lng: - 103.7717271, lat: 19.200316 },
+                { lng: - 103.7704182, lat: 19.2002552 },
+                { lng: - 103.7696242, lat: 19.2008429 },
+                { lng: - 103.7684226, lat: 19.2006605 },
+                { lng: - 103.7678647, lat: 19.2022613 },
+                { lng: - 103.7683797, lat: 19.2036798 },
+                { lng: - 103.7678432, lat: 19.2049564 },
+                { lng: - 103.7662554, lat: 19.2049159 },
+                { lng: - 103.7647963, lat: 19.2071448 },
+                { lng: - 103.7638521, lat: 19.2078946 },
+                { lng: - 103.7618995, lat: 19.2086038 },
+                { lng: - 103.7615347, lat: 19.2098196 },
+                { lng: - 103.7621355, lat: 19.2102451 },
+                { lng: - 103.7619209, lat: 19.2111772 },
+                { lng: - 103.7611055, lat: 19.2115216 },
+                { lng: - 103.7600756, lat: 19.2125753 },
+                { lng: - 103.7594104, lat: 19.2134466 },
+                { lng: - 103.758359, lat: 19.2141963 },
+                { lng: - 103.7590027, lat: 19.2146623 },
+                { lng: - 103.7588739, lat: 19.2153107 },
+                { lng: - 103.7581229, lat: 19.2150676 },
+                { lng: - 103.7574577, lat: 19.2154931 },
+                { lng: - 103.757329, lat: 19.2172154 },
+                { lng: - 103.7564063, lat: 19.2171343 },
+                { lng: - 103.7563634, lat: 19.2182892 },
+                { lng: - 103.7552691, lat: 19.2190389 },
+                { lng: - 103.7564063, lat: 19.2196873 },
+                { lng: - 103.7554836, lat: 19.2206193 },
+                { lng: - 103.7553763, lat: 19.2216932 },
+                { lng: - 103.7549686, lat: 19.223152 }
+
+        ];
+
+        // Construct the polygon.
+        var bermudaTriangle = new google.maps.Polygon({
+          paths: triangleCoords,
+          strokeColor: '#0000FF',
+          strokeOpacity: 0.2,
+          strokeWeight: 2,
+          fillColor: '#0000FA',
+          fillOpacity: 0.1
+        });
+        bermudaTriangle.setMap(map);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUPV-xK0Wz7Xj6A7NqERCRKng9EqDLl8E&callback=initMap">
+    </script>
+  </body>
+</html>
